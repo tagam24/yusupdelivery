@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/triangle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+                    <!--
+                                        <android.support.v4.view.ViewPager
+                                            android:id="@+id/viewpager_reklama_main"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="fill_parent"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_alignParentTop="true" />
+                    -->
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        custom:auto_cycle="true"
+                        custom:indicator_visibility="visible"
+                        custom:pager_animation="Accordion"
+                        custom:pager_animation_span="1100" />
+
+                    <com.daimajia.slider.library.Indicators.PagerIndicator
+                        android:id="@+id/custom_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        custom:selected_color="#fff"
+
+                        custom:selected_height="6dp"
+                        custom:selected_padding_left="5dp"
+                        custom:selected_padding_right="5dp"
+                        custom:selected_width="6dp"
+                        custom:shape="oval"
+                        custom:unselected_color="#55333333"
+                        custom:unselected_height="6dp"
+                        custom:unselected_padding_left="5dp"
+                        custom:unselected_padding_right="5dp"
+                        custom:unselected_width="6dp" />
+
+                    <com.daimajia.slider.library.Indicators.PagerIndicator
+                        android:id="@+id/custom_indicator2"
+                        style="@style/AndroidImageSlider_Corner_Oval_Orange"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/gradient"></RelativeLayout>
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator_reklama_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="13dp"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/delivery_layout_main_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:elevation="10dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/effect1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/dostawka"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+
+                                    />
+
+                                <View
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.7"
+                                    android:background="@drawable/gradient2" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:alpha="0.9"
+                                    android:background="@drawable/gradient" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="2dp"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:id="@+id/delivery_name_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Eltip Bermek Hyzmaty"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/delivery_content_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Saýlanan tagamlary tiz, amatly, ynamly eltip bermek hyzmaty"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:elevation="10dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/effect2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/aksiya_layout_main_window"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+
+                                <View
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.6"
+                                    android:background="@drawable/gradient2" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:alpha="0.9"
+                                    android:background="@drawable/gradient" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:id="@+id/aksiya_name_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Arzanladyşlar"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/aksiya_content_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Arzanladys nahar aksiýalary"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cafe_layout_main_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:elevation="10dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/effect3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/kafe"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+
+                                <View
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.6"
+                                    android:background="@drawable/gradient2" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:alpha="0.9"
+                                    android:background="@drawable/gradient" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:id="@+id/cafe_name_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Kafe-Bar"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/cafe_content_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kafelar we Barlar barada maglumatlar"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/wedding_layout_main_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:elevation="10dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/effect4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/toy_hyzmatlar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentStart="true"
+
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:scaleType="centerCrop" />
+
+                                <View
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.6"
+                                    android:background="@drawable/gradient2" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:alpha="0.9"
+                                    android:background="@drawable/gradient" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:id="@+id/toy_name_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Toý Hyzmatlary"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/toy_content_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Toý mekanlar, toý bezegleri we toý hyzmatlarynyň ähli görnüşleri"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/gumenje_layout_main_window"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="58dp"
+                        android:elevation="10dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/effect5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:mrl_rippleOverlay="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/gumenje_hyzmatlar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:scaleType="centerCrop"
+                                 />
+
+                                <View
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.6"
+                                    android:background="@drawable/gradient2" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:alpha="0.9"
+                                    android:background="@drawable/gradient" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:id="@+id/gumenje_name_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Gumenje"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/gumenje_content_layout_main_window"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Gyzyklt maglumatlar bilen wagtynyzy gowy gecirin"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="?attr/colorPrimary">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="44"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/home_button_main_window"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/home_white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/favorite_button_main_window"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/heart_white" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="12"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="44">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="44"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/location_button_main_window"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:elevation="@dimen/carbon_elevationHigh"
+                                android:src="@drawable/map_white" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/user_button_main_window"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/user_white" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_karzina1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="?attr/colorPrimary"
+                app:cardCornerRadius="27dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="26dp">
+
+                        <ImageView
+                            android:id="@+id/karzina_button_main_window"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="9dp"
+                            android:src="@drawable/cart_icon"
+                            android:tint="?attr/colorPrimary" />
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/counter_basket1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/layout_karzina1"
+                android:layout_alignRight="@+id/layout_karzina1"
+                android:background="@drawable/red_circle"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="34"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.dd.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="-3dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="-5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="?attr/colorPrimary"
+            android:gravity="center_vertical">
+
+            <!--     <ImageView
+                     android:id="@+id/menu_button"
+                     android:layout_width="34dp"
+                     android:layout_height="match_parent"
+                     android:layout_alignParentLeft="true"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginTop="5dp"
+                     android:src="@drawable/menu_icon"
+                     android:tint="@android:color/white" />
+     -->
+            <TextView
+                android:id="@+id/flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="TM"
+                android:textColor="@android:color/white"
+                android:textSize="17dp" />
+        <RelativeLayout
+            android:id="@+id/color_circle"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/circle_white">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/circle_footbal_vote"
+                        android:tint="?attr/colorPrimary"
+                        >
+                    </ImageView>
+
+
+        </RelativeLayout>
+            <TextView
+                android:id="@+id/title_app"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:fontFamily=""
+                android:gravity="center"
+                android:text="TAGAM24"
+                android:textColor="@android:color/white"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.dd.ShadowLayout>
+
+</RelativeLayout>

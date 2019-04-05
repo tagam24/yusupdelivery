@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/circle_orange"
+                android:tint="?attr/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/circle_red"
+                android:tint="?attr/colorPrimaryDark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Registrasiya"
+                    android:textColor="@android:color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_centerInParent="true">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                       app:cardElevation="6dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="50dp"></android.support.v7.widget.CardView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/login_bac_corners"
+                        android:elevation="6dp"
+                        android:orientation="vertical"
+                        android:weightSum="150">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/login_back"
+                            android:elevation="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:padding="2dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/user_icon"
+                                android:tint="@android:color/darker_gray" />
+
+                            <EditText
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:background="@android:color/transparent"
+                                android:hint="sizin adynyz"
+                                android:maxLines="1"
+                                android:textSize="16dp">
+
+                            </EditText>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"
+                            android:background="@android:color/white"
+                            android:elevation="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/phone_icon"
+                                android:tint="@android:color/darker_gray" />
+
+                            <TextView
+                                android:id="@+id/beforephone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="+993"
+                                android:textSize="16dp" />
+
+                            <EditText
+                                android:id="@+id/phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:background="@android:color/transparent"
+                                android:hint="sizin telefon beliginiz"
+                                android:inputType="numberDecimal"
+                                android:maxLength="8"
+                                android:textSize="16dp">
+
+                            </EditText>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/login_back_bottom"
+                            android:elevation="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/map_icon"
+                                android:tint="@android:color/darker_gray" />
+
+                            <EditText
+                                android:id="@+id/place"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:background="@android:color/transparent"
+                                android:hint="sizin salgynyz"
+                                android:maxLines="1"
+                                android:textSize="16dp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/sign"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        app:cardBackgroundColor="?attr/colorPrimary"
+                        app:cardCornerRadius="27dp"
+                        app:cardElevation="7dp"
+                        app:cardUseCompatPadding="false">
+
+                        <ImageView
+                            android:id="@+id/send_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="12dp"
+                            android:src="@drawable/send_icon"
+                            android:tint="@android:color/white" />
+
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="25dp"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:text="Sizi Tagam24 agzalylygyna Hos geldiniz basgada soraglar ucin admina yuz tutyp bilersiniz"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:rotation="180"
+                android:scaleType="fitXY"
+                android:src="@drawable/circle_orangee"
+                android:tint="?attr/colorPrimary" />
+
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:rotation="180"
+                android:scaleType="fitXY"
+                android:src="@drawable/circle_red"
+                android:tint="?attr/colorPrimaryDark" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

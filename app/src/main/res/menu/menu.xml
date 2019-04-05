@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/cart_icon"
+            android:title="Menin Sargtlarym"
+            android:iconTint="?attr/colorPrimary"></item
+            >
+        <item
+            android:id="@+id/nav_menu_1"
+            android:icon="@drawable/setting_icon"
+            android:title="Sazlamalar"
+            android:iconTint="?attr/colorPrimary"/>
+
+        <item
+            android:id="@+id/nav_menu_2"
+            android:iconTint="?attr/colorPrimary"
+            android:icon="@drawable/call_icon"
+            android:title="Hasap açmak" />
+        <item
+            android:id="@+id/nav_menu_3"
+            android:iconTint="?attr/colorPrimary"
+            android:icon="@drawable/info_icon"
+            android:title="Maglumat" />
+        <item
+            android:id="@+id/nav_menu_4"
+            android:icon="@drawable/star_icon"
+            android:title="Sikayat" />
+
+    </group>
+</menu>

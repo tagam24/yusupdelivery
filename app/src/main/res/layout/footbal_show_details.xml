@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/triangle" />
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@android:color/transparent">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <RelativeLayout
+                    android:id="@+id/layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="-15dp" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="50dp"
+                        android:foregroundGravity="center" />
+
+
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="?attr/colorPrimary"
+                    android:textAlignment="center"
+                    android:titleTextColor="@android:color/black"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    app:layout_collapseMode="pin">
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/back"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/back_icon" />
+
+                        <TextView
+                            android:id="@+id/title_toolbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:text="hello"
+                            android:maxLines="1"
+                            android:maxLength="15"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="19dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-60dp"
+            android:background="@android:color/transparent"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:text="Roasted chicken with egg"
+                            android:textColor="@android:color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="24"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.dd.ShadowLayout
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:layout_margin="2dp"
+                                    app:sl_cornerRadius="25dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_white">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:src="@drawable/calendar_icon"
+                                            android:tint="?attr/colorPrimary" />
+                                    </RelativeLayout>
+                                </com.dd.ShadowLayout>
+
+                                <TextView
+                                    android:id="@+id/date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="7dp"
+                                    android:gravity="center"
+                                    android:textSize="13dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="24"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.dd.ShadowLayout
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:layout_margin="2dp"
+                                    app:sl_cornerRadius="25dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_white">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:src="@drawable/watch_icon"
+                                            android:tint="?attr/colorPrimary" />
+                                    </RelativeLayout>
+                                </com.dd.ShadowLayout>
+
+                                <TextView
+                                    android:id="@+id/watch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="7dp"
+                                    android:gravity="center"
+                                    android:text="145"
+                                    android:textSize="13dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="24"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.dd.ShadowLayout
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:layout_margin="2dp"
+                                    app:sl_cornerRadius="25dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_white">
+
+                                        <ImageView
+                                            android:id="@+id/rate"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:src="@drawable/finger_bos"
+                                            android:tint="?attr/colorPrimary" />
+                                    </RelativeLayout>
+                                </com.dd.ShadowLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/rating"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="7dp"
+                                        android:gravity="center"
+
+                                        android:textSize="13dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="27"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.dd.ShadowLayout
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:layout_margin="2dp"
+                                    app:sl_cornerRadius="25dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_white">
+
+                                        <ImageView
+                                            android:id="@+id/love"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp"
+                                            android:src="@drawable/heart_bos"
+                                            android:tint="?attr/colorPrimary" />
+                                    </RelativeLayout>
+                                </com.dd.ShadowLayout>
+
+                                <TextView
+                                    android:id="@+id/haladym"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="7dp"
+                                    android:gravity="center"
+                                    android:text="Haladym"
+                                    android:textSize="13dp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_margin="5dp"
+                            android:background="@android:color/darker_gray" />
+
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="hfiskf ndfbuys df fsbfesf ds sefbus fesvuyf  sdffsiuefshef efsuefsegf uegf esgf ds g gyg gy ggyu g g  yuu g yu gyug yug yg yug yg ybuy bjhdfb drhd vhryghdurff gruhu yudrgvuydrg yufugd hdf segf"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/team1_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:textSize="14dp"
+                                    android:text="Real Madrid yenyar" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="100">
+
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_weight="75"
+                                            android:background="@drawable/footbal_rate_layut1"
+                                            android:padding="1dp"
+                                            android:weightSum="100">
+
+                                            <LinearLayout
+                                                android:id="@+id/l1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0"
+                                                android:background="@android:color/holo_green_dark"
+                                                android:gravity="left"
+                                                android:orientation="horizontal">
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="25"
+                                            android:gravity="right">
+
+                                            <com.dd.ShadowLayout
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                app:sl_cornerRadius="20dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/circle_white">
+
+                                                    <ImageView
+                                                        android:id="@+id/team1_rate"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:scaleType="fitXY"
+                                                        android:src="@drawable/circle_footbal_vote"
+                                                        android:tint="@color/colorPrimary3" />
+                                                </RelativeLayout>
+                                            </com.dd.ShadowLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/team1_counter"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center_vertical"
+                                        android:text="0"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/draw_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:textSize="14dp"
+                                    android:text="Real Madrid yenyar" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="100">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_weight="75"
+                                            android:background="@drawable/footbal_rate_layut1"
+                                            android:padding="1dp"
+                                            android:weightSum="100">
+
+                                            <LinearLayout
+                                                android:id="@+id/l2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0"
+                                                android:background="@android:color/holo_green_dark"
+                                                android:orientation="horizontal"></LinearLayout>
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="25"
+                                            android:gravity="right">
+
+                                            <com.dd.ShadowLayout
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                app:sl_cornerRadius="20dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/circle_white">
+
+                                                    <ImageView
+                                                        android:id="@+id/draw_rate"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:scaleType="fitXY"
+                                                        android:src="@drawable/circle_footbal_vote"
+                                                        android:tint="@color/colorPrimary3" />
+                                                </RelativeLayout>
+                                            </com.dd.ShadowLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/draw_counter"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_weight="0"
+                                        android:gravity="center_vertical"
+                                        android:text="0"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="15dp" />
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/team2_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:textSize="14dp"
+                                    android:text="Real Madrid yenyar" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:weightSum="100">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_weight="75"
+                                            android:background="@drawable/footbal_rate_layut1"
+                                            android:padding="1dp"
+                                            android:weightSum="100">
+
+                                            <LinearLayout
+                                                android:id="@+id/l3"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="0"
+                                                android:background="@android:color/holo_green_dark"
+                                                android:orientation="horizontal"></LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="25"
+                                            android:gravity="right">
+
+                                            <com.dd.ShadowLayout
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                app:sl_cornerRadius="20dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/circle_white">
+
+                                                    <ImageView
+                                                        android:id="@+id/team2_rate"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:scaleType="fitXY"
+                                                        android:src="@drawable/circle_footbal_vote"
+                                                        android:tint="@color/colorPrimary3" />
+                                                </RelativeLayout>
+                                            </com.dd.ShadowLayout>
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/team2_counter"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center_vertical"
+                                        android:text="0"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="10dp"
+                    app:cardUseCompatPadding="false">
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="15dp"
+                    app:cardUseCompatPadding="false">
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
+

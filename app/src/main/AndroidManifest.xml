@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tagam24.tagam">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme1">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".first_page"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".zakaz_text"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".splash_screen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".firebase.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Main2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".like_activity.like_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gumenje.footbal_show_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".liked_gumenje.like_activity_gumenje"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Registration1"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Main_window" />
+        <activity
+            android:name=".user_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registration2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dastawka_recycle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cafes_menu.Cafes_menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".karzina.Karzina"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aksiya.arzanlad_menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aksiya.aksiya_recycle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gumenje.gumenje_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cafe_bar.cafe_recycle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gumenje.recept_show"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cafe_bar.show_details_bars"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.myorder1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.myorder2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".send_karzina"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
