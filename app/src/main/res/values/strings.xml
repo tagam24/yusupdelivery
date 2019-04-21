@@ -2,11 +2,27 @@
     <string name="app_name">Tagam24</string>
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
+    <string name="n1"></string>
     <string-array name="color">
         <item>#fe550c</item>
         <item>#0287e6</item>
         <item>#04b32b</item>
         <item>#FF4081</item>
     </string-array>
-
+    <string-array name="yeri_car">
+        <item>Aşgabat</item>
+        <item>Ahal</item>
+        <item>Mary</item>
+        <item>Balkan</item>
+        <item>Lebap</item>
+        <item>Daşoguz</item>
+    </string-array>
+    <string-array name="yeri_car_ru">
+        <item>Ашгабат</item>
+        <item>Ахал</item>
+        <item>Мары</item>
+        <item>Балкан</item>
+        <item>Лебап</item>
+        <item>Дашогуз</item>
+    </string-array>
 </resources>

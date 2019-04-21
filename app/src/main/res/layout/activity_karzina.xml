@@ -3,17 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorSilver">
 
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleY="10"
-            android:scaleX="6.4"
-            app:srcCompat="@drawable/triangle" />
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -39,23 +36,15 @@
                         android:orientation="horizontal">
 
 
-                        <com.makeramen.roundedimageview.RoundedImageView
-                            android:id="@+id/image"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/doner"
-                            app:riv_corner_radius="25dp" />
+
 
 
                         <TextView
                             android:id="@+id/cafe_name"
+                            android:layout_marginLeft="11dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Galkynys dostawka"
-                            android:textColor="@android:color/white"
                             android:textSize="18dp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -71,18 +60,11 @@
                     </LinearLayout>
 
 
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_margin="10dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="3dp">
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:elevation="5dp"
+                            android:layout_marginTop="10dp"
                             android:gravity="center_vertical">
 
                             <TextView
@@ -110,18 +92,7 @@
                                 android:textStyle="bold" />
                         </RelativeLayout>
 
-                    </android.support.v7.widget.CardView>
 
-                    <TextView
-                        android:id="@+id/gyzyklandyr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="Sizi belki gyzyklandyrar"
-                        android:textColor="@android:color/black"
-                        android:textSize="17dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -152,7 +123,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:cardCornerRadius="15dp"
-    app:cardBackgroundColor="?attr/colorPrimary"
+    app:cardBackgroundColor="@color/green"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     >
@@ -200,7 +171,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="?attr/colorPrimary">
+            android:background="@android:color/white">
 
             <ImageView
                 android:id="@+id/back"
@@ -211,18 +182,9 @@
                 android:layout_marginLeft="10dp"
                 android:padding="3dp"
                 android:src="@drawable/back_icon"
-                android:tint="@android:color/white" />
+                android:tint="@android:color/black" />
 
-            <ImageView
-                android:id="@+id/info"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:layout_marginRight="10dp"
-                android:padding="5dp"
-                android:src="@drawable/clear_icon"
-                android:tint="@android:color/white" />
+
 
             <TextView
                 android:id="@+id/title"
@@ -233,7 +195,7 @@
                 android:layout_marginRight="40dp"
                 android:gravity="center"
                 android:text="Galkynys Naharhana"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="17dp" />
         </RelativeLayout>
     </com.dd.ShadowLayout>

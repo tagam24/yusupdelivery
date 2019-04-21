@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splash_screen">
+    tools:context="com.yusup.delivery.splash_screen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="-3dp"
-                        android:src="@drawable/logoo"
+
                         android:tint="@android:color/white"
                         android:scaleType="fitXY"/>
                 </RelativeLayout>
@@ -65,6 +65,6 @@
         android:paddingLeft="-5dp"
         android:paddingRight="11dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/first_page_image"/>
+      />
 
 </RelativeLayout>

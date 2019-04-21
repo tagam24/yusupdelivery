@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tagam24.tagam">
+    package="com.yusup.tagam">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".first_page"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".zakaz_text"
-            android:screenOrientation="portrait"/>
+        <activity android:name="com.yusup.delivery.show_all"></activity>
         <activity
-            android:name=".splash_screen"
+            android:name="com.yusup.delivery.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusup.delivery.first_page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusup.delivery.zakaz_text"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusup.delivery.splash_screen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,76 +34,77 @@
         </activity>
 
         <service
-            android:name=".firebase.FirebaseMessagingService"
+            android:name="com.yusup.delivery.firebase.FirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".firebase.FirebaseInstanceIDService">
+        <service android:name="com.yusup.delivery.firebase.FirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <activity
-            android:name=".Main2Activity"
+            android:name="com.yusup.delivery.Main2Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".like_activity.like_activity"
+            android:name="com.yusup.delivery.like_activity.like_activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".gumenje.footbal_show_details"
+            android:name="com.yusup.delivery.gumenje.footbal_show_details"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".liked_gumenje.like_activity_gumenje"
+            android:name="com.yusup.delivery.liked_gumenje.like_activity_gumenje"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Registration1"
+            android:name="com.yusup.delivery.Registration1"
             android:screenOrientation="portrait" />
-        <activity android:name=".Main_window" />
+        <activity android:name="com.yusup.delivery.Main_window" />
         <activity
-            android:name=".user_info"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".registration2"
+            android:name="com.yusup.delivery.user_info"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".dastawka_recycle"
+            android:name="com.yusup.delivery.registration2"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".cafes_menu.Cafes_menu"
+            android:name="com.yusup.delivery.dastawka_recycle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".karzina.Karzina"
+            android:name="com.yusup.delivery.cafes_menu.Cafes_menu"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".aksiya.arzanlad_menu"
+            android:name="com.yusup.delivery.karzina.Karzina"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".aksiya.aksiya_recycle"
+            android:name="com.yusup.delivery.aksiya.arzanlad_menu"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".gumenje.gumenje_activity"
+            android:name="com.yusup.delivery.aksiya.aksiya_recycle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".cafe_bar.cafe_recycle"
+            android:name="com.yusup.delivery.gumenje.gumenje_activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".gumenje.recept_show"
+            android:name="com.yusup.delivery.cafe_bar.cafe_recycle"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".cafe_bar.show_details_bars"
+            android:name="com.yusup.delivery.gumenje.recept_show"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".order.myorder1"
+            android:name="com.yusup.delivery.cafe_bar.show_details_bars"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".order.myorder2"
+            android:name="com.yusup.delivery.order.myorder1"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".send_karzina"
+            android:name="com.yusup.delivery.order.myorder2"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusup.delivery.send_karzina"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.yusup.delivery.Imageshow" />
     </application>
 
 </manifest>

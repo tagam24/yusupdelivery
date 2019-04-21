@@ -189,9 +189,10 @@
                         android:id="@+id/zakaz_old"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="Zakaz et kone adresas"
                         android:textColor="@android:color/white"
-                        android:textSize="17dp" />
+                        android:textSize="16dp" />
                 </LinearLayout>
             </com.balysv.materialripple.MaterialRippleLayout>
 
@@ -374,8 +375,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Zakaz et kone adresas"
+                    android:gravity="center"
                     android:textColor="@android:color/white"
-                    android:textSize="17dp" />
+                    android:textSize="16dp" />
             </LinearLayout>
             </com.balysv.materialripple.MaterialRippleLayout>
 

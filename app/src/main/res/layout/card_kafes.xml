@@ -1,273 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/linear"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:id="@+id/cardview_cafe"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp">
+        android:layout_height="300dp"
+        android:layout_margin="7dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp">
 
-
-        <android.support.v7.widget.CardView
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/effect_card"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
+            app:mrl_rippleOverlay="true"
+            android:layout_height="match_parent">
 
-            <com.balysv.materialripple.MaterialRippleLayout
-                android:id="@+id/ripple"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:mrl_rippleOverlay="true">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70">
+
+                    <ImageView
+                        android:id="@+id/imag_cafe_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                       />
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardview2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="8dp">
+
+                        <ImageView
+                            android:id="@+id/logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            />
+
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
                     android:orientation="vertical"
-                    >
+                    android:weightSum="100">
 
                     <RelativeLayout
-                        android:id="@+id/r_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="190dp"
-                     >
-
-                        <com.github.florent37.shapeofview.shapes.ArcView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentTop="true"
-                            android:backgroundTint="@android:color/white"
-                            android:elevation="5dp"
-                            app:shape_arc_cropDirection="outside"
-                            app:shape_arc_height="35dp"
-                            app:shape_arc_position="bottom">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <ImageView
-                                    android:id="@+id/imag_cafe_show"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/map_icon" />
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="70dp"
-                                    android:layout_alignParentBottom="true"
-                                    android:alpha="0.9"
-                                    android:background="@drawable/gradient" />
-
-                            </RelativeLayout>
-
-                        </com.github.florent37.shapeofview.shapes.ArcView>
-
-
-
-                    </RelativeLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="5dp"
-
-                        android:background="@android:color/transparent"
-                        android:orientation="vertical"
-                        android:paddingLeft="15dp"
-                        android:paddingTop="5dp">
+                        android:layout_height="0dp"
+                        android:layout_weight="50"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/cafe_name_show"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:maxLines="1"
-                            android:text="Berkarar Soltan Restorany"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="Burger King"
                             android:textColor="@android:color/black"
-                            android:textSize="19dp" />
+                            android:textSize="19dp"
+                            android:textStyle="bold" />
 
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp">
+                            android:gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true">
 
-                            <LinearLayout
-                                android:id="@+id/l_rate"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:layout_marginLeft="-3dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:id="@+id/cafe_star_image1_show"
-                                    android:layout_width="22dp"
-                                    android:layout_height="22dp"
-                                    android:src="@drawable/star_icon" />
-
-                                <ImageView
-                                    android:id="@+id/cafe_star_image2_show"
-                                    android:layout_width="22dp"
-                                    android:layout_height="22dp"
-                                    android:src="@drawable/star_icon" />
-
-                                <ImageView
-                                    android:id="@+id/cafe_star_image3_show"
-                                    android:layout_width="22dp"
-                                    android:layout_height="22dp"
-                                    android:src="@drawable/star_icon" />
-
-                                <ImageView
-                                    android:id="@+id/cafe_star_image4_show"
-                                    android:layout_width="22dp"
-                                    android:layout_height="22dp"
-                                    android:src="@drawable/star_icon" />
-
-                                <ImageView
-                                    android:id="@+id/cafe_star_image5_show"
-                                    android:layout_width="22dp"
-                                    android:layout_height="22dp"
-                                    android:src="@drawable/star_white" />
-
-
-                                <TextView
-                                    android:id="@+id/n_people"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:textSize="14dp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_alignLeft="@+id/card"
                                 android:layout_marginRight="5dp"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/time"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginRight="5dp"
-                                    android:gravity="center"
-                                    android:text="9:00-20:00" />
-
-                                <ImageView
-                                    android:id="@+id/worktime_img"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginRight="3dp"
-                                    android:src="@drawable/clock_icon" />
+                                android:src="@drawable/clock_icon"
+                                android:tint="@android:color/darker_gray" />
 
 
-                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center_vertical"
+                                android:padding="2dp"
+                                android:text="09:00-22:30"
+                                android:textSize="14dp" />
 
-                        </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="50"
+                        android:orientation="horizontal"
+                        android:weightSum="90">
+
+                        <ImageView
+                            android:id="@+id/cafe_star_image1_show"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/star_icon" />
+
+                        <ImageView
+                            android:id="@+id/cafe_star_image2_show"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/star_icon" />
+
+                        <ImageView
+                            android:id="@+id/cafe_star_image3_show"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/star_icon" />
+
+                        <ImageView
+                            android:id="@+id/cafe_star_image4_show"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/star_icon" />
+
+                        <ImageView
+                            android:id="@+id/cafe_star_image5_show"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/star_icon" />
 
                         <TextView
-                            android:id="@+id/cafe_addres_show"
-                            android:layout_width="match_parent"
+                            android:id="@+id/zakaz_ot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="Заказ от "
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/min_zakaz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="500 TMT"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:maxLines="1"
-                            android:text="Ashgabat Saher, Abadancylyk Koce"
-                            android:textSize="15dp" />
+                            android:text="  -  "
+
+                            />
+
+                        <TextView
+                            android:id="@+id/place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:gravity="center_vertical"
+                            android:text="Aşgabat şäheri"
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
-
                 </LinearLayout>
 
-            </com.balysv.materialripple.MaterialRippleLayout>
-        </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="195dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="10dp">
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </android.support.v7.widget.CardView>
 
-
-            <com.dd.ShadowLayout
-                android:id="@+id/cardview"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="13dp"
-                android:elevation="5dp"
-                android:layout_marginBottom="1dp"
-                android:background="@android:color/white"
-                app:sl_cornerRadius="27dp"
-                app:sl_shadowRadius="3dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/circle_white">
-
-                    <ImageView
-                        android:id="@+id/love"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:src="@drawable/heart_bos"
-                        android:tint="?attr/colorPrimary" />
-                </RelativeLayout>
-            </com.dd.ShadowLayout>
-            <com.dd.ShadowLayout
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="13dp"
-                android:elevation="5dp"
-                android:layout_marginBottom="1dp"
-                android:background="@android:color/white"
-                app:sl_cornerRadius="10dp"
-                app:sl_shadowRadius="3dp">
-
-                <RelativeLayout
-                    android:id="@+id/cardview2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="1dp"
-                    android:background="@drawable/littlecircle_white">
-
-
-                    <ImageView
-                        android:padding="1dp"
-                        android:id="@+id/logo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/pizza" />
-
-
-                </RelativeLayout>
-            </com.dd.ShadowLayout>
-
-        </RelativeLayout>
-
-
-    </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

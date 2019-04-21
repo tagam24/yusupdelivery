@@ -5,29 +5,29 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_menu"
-            android:icon="@drawable/cart_icon"
-            android:title="Menin Sargtlarym"
+            android:id="@+id/n1"
+            android:icon="@drawable/user_icon"
+            android:title="@string/n1"
             android:iconTint="?attr/colorPrimary"></item
             >
         <item
-            android:id="@+id/nav_menu_1"
+            android:id="@+id/n2"
             android:icon="@drawable/setting_icon"
             android:title="Sazlamalar"
             android:iconTint="?attr/colorPrimary"/>
 
         <item
-            android:id="@+id/nav_menu_2"
+            android:id="@+id/n3"
             android:iconTint="?attr/colorPrimary"
             android:icon="@drawable/call_icon"
             android:title="Hasap açmak" />
         <item
-            android:id="@+id/nav_menu_3"
+            android:id="@+id/n4"
             android:iconTint="?attr/colorPrimary"
             android:icon="@drawable/info_icon"
             android:title="Maglumat" />
         <item
-            android:id="@+id/nav_menu_4"
+            android:id="@+id/n5"
             android:icon="@drawable/star_icon"
             android:title="Sikayat" />
 

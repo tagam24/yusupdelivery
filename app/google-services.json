@@ -1,96 +1,37 @@
 {
   "project_info": {
-    "project_number": "470372536445",
-    "firebase_url": "https://tagam24-7f6a8.firebaseio.com",
-    "project_id": "tagam24-7f6a8",
-    "storage_bucket": "tagam24-7f6a8.appspot.com"
+    "project_number": "214445489588",
+    "firebase_url": "https://delivery-bc2cc.firebaseio.com",
+    "project_id": "delivery-bc2cc",
+    "storage_bucket": "delivery-bc2cc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:470372536445:android:00bc15e73a5eebf6",
+        "mobilesdk_app_id": "1:214445489588:android:5cce12d42f48b61f",
         "android_client_info": {
-          "package_name": "com.tagam24.tagam"
+          "package_name": "com.yusup.delivery"
         }
       },
       "oauth_client": [
         {
-          "client_id": "470372536445-vm0voatn2mhrku5ek29veukd1ves3mvg.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tagam24.tagam",
-            "certificate_hash": "35687c87d9f8619a41f2b09c41678e62c661e63d"
-          }
-        },
-        {
-          "client_id": "470372536445-ftp4q0kjodagh0fef355lq15arsgel6i.apps.googleusercontent.com",
+          "client_id": "214445489588-35n3rctkr0k9ve954pjug7sf1bt5hn5d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAqCxHeS0Cvzd-HaHCJTc6v3tCGBLY9yxE"
+          "current_key": "AIzaSyBQwFAZmuzW49ygFGYOxCMOwSPlOLdbZcY"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "470372536445-ftp4q0kjodagh0fef355lq15arsgel6i.apps.googleusercontent.com",
+              "client_id": "214445489588-35n3rctkr0k9ve954pjug7sf1bt5hn5d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:470372536445:android:59c4d3bd72a24ddf",
-        "android_client_info": {
-          "package_name": "synchedapps.tagam24"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "470372536445-4nfh0ctbmb5dmbtpkv6rp1b03krsucu3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "synchedapps.tagam24",
-            "certificate_hash": "c80f236b540969774f08da13ced21e679b2f562e"
-          }
-        },
-        {
-          "client_id": "470372536445-ftp4q0kjodagh0fef355lq15arsgel6i.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAqCxHeS0Cvzd-HaHCJTc6v3tCGBLY9yxE"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "470372536445-ftp4q0kjodagh0fef355lq15arsgel6i.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
